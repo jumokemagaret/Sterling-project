@@ -1,0 +1,205 @@
+body {
+  background: #eee;
+  font-family: "Alegreya", serif;
+}
+
+#wrapper {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  margin: 40px auto;
+  max-width: 900px;
+  border: 1px solid white;
+  grid-template-areas:
+    "sideNav sideNav header header  header header header header header header"
+    "sideNav sideNav body body body body body body body body";
+}
+
+.sideNav {
+  position: relative;
+  grid-area: sideNav;
+  background: rgb(8, 68, 26);
+}
+
+.header {
+  display: grid;
+  grid-area: header;
+  padding: 20px 7px;
+  background: #fff;
+  grid-template-columns: repeat(10, 1fr);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.body {
+  grid-area: body;
+  margin: 8px 8px;
+  padding: 7px 30px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.search {
+  grid-column: 1 / span 7;
+  position: relative;
+  left: 10px;
+}
+
+input {
+  display: inline-block;
+  padding: 8px 0 8px 30px;
+  font-size: 18px;
+  border-radius: 8px;
+  width: 90%;
+  background: #ddd;
+}
+
+.icon2 {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  font-size: 18px;
+  color: #aaa;
+}
+
+/* input {
+  content: "\f002";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: red;
+} */
+
+.account {
+  grid-column: 9 / span 2;
+}
+
+.circleButton {
+  padding: 2px 15px;
+  background: rgb(121, 229, 153);
+  border: none;
+  margin-right: 5px;
+  border-radius: 20px;
+}
+
+.t {
+  margin-bottom: 20px;
+}
+
+.brand {
+  display: block;
+  text-align: center;
+  width: 100%;
+  color: white;
+  font-size: 21px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+li {
+  display: block;
+  position: relative;
+  left: -20px;
+  width: 100%;
+  list-style: none;
+  text-align: center;
+}
+
+li a {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  text-align: left;
+  text-decoration: none;
+  color: #ddd;
+  letter-spacing: 0.1em;
+}
+
+.icon {
+  position: relative;
+  top: 2px;
+}
+
+.settings {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.avatar {
+  position: relative;
+  top: 4px;
+}
+
+.round {
+  height: 20px;
+  border: 1px solid;
+  border-radius: 30%;
+  margin: 10px;
+  padding: 5px;
+}
+
+.green {
+  position: absolute;
+  bottom: 3px;
+  right: 5px;
+  padding: 5px;
+  background: rgb(10, 102, 31);
+  border: none;
+  color: white;
+  border-radius: 4px;
+}
+
+.span {
+  color: rgb(24, 89, 40);
+  font-size: 21px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  margin: 20px 0;
+  grid-gap: 20px;
+  grid-template-areas:
+    "install install install install install info info info"
+    "item item item item item address address address"
+    "action action action action action notes notes notes";
+}
+
+.install {
+  grid-area: install;
+  padding: 10px;
+  height: 100px;
+  border: 1px solid #bbb;
+}
+
+.item {
+  grid-area: item;
+  position: relative;
+  top: -10px;
+  border: 1px solid #bbb;
+  height: 130px;
+}
+
+.info {
+  grid-area: info;
+  padding: 10px;
+  border: 1px solid #bbb;
+}
+
+.address {
+  grid-area: address;
+  padding: 10px;
+  border: 1px solid #bbb;
+}
+
+.notes {
+  grid-area: notes;
+  padding: 10px;
+  border: 1px solid #bbb;
+}
+
+.action {
+  grid-area: action;
+  position: relative;
+  top: -20px;
+}
